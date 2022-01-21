@@ -1,0 +1,22 @@
+{
+    "classes": [{
+         "name": "Photography Lessons",
+         "dates": "Mondays and Wednesdays",
+         "times": "12pm-2pm",
+         "description": "Here we teach you how to get the best shots of our furry little friends, as well tips to post the best instagram post!"
+     },
+     {
+         "name": "Racoon Belly Rub Classes",
+         "dates": "EVERY DAY",
+         "times": ["8am-12pm", "2pm-5pm"],
+         "description": "HERE WE WILL BE LEARNING HOW TO BEST RUB THE BELLIES OF OUR FURRY BOYS. YOU DO NOT WANT TO MISS THIS."
+     },
+     {  
+         "name": "Grooming Lessons", 
+         "dates": "Tuesdays and Thursdays",
+         "times": "12pm-2pm",
+         "description": "Here we we will be giving you tips on how to make sure your 🦝 looks their best every day!"
+     }
+ ]
+ }
+     

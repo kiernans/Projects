@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'poiret_oneregular';
+    src: url('fonts/PoiretOne/poiretone-regular-webfont.woff2') format('woff2'),
+         url('fonts/PoiretOne/poiretone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'benchninebold';
+    src: url('fonts/BenchNine/benchnine-bold-webfont.woff2') format('woff2'),
+         url('fonts/BenchNine/benchnine-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'benchninelight';
+    src: url('fonts/BenchNine/benchnine-light-webfont.woff2') format('woff2'),
+         url('fonts/BenchNine/benchnine-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'benchnineregular';
+    src: url('fonts/BenchNine/benchnine-regular-webfont.woff2') format('woff2'),
+         url('fonts/BenchNine/benchnine-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+    font-size: 10px;
+}
+section {
+    font-size: 25px;
+}
+main div {
+    margin-top: 10em;
+    margin-left: 2em;
+    margin-right: 2em;
+    max-width: 170em;
+}
+main {
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightskyblue;
+    max-width: 116em;
+    border-style: ridge;
+    margin-left: 2em;
+}
+body {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header h1 {
+    font-family: poiret_oneregular;
+    font-size: 5em;
+    color: royalblue;
+    margin-top: 2em;
+}
+h2 {
+    font-family: benchninebold;
+    font-size: 3em;
+    color: darkred;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 95%;
+    font-family: benchninebold;
+    font-size: 2em;
+    border-style: ridge;
+    border-color: whitesmoke;
+    background-color: lightskyblue;
+    color: skyblue;
+    margin-top: 1em;
+    margin-left: 1em;
+    max-width: 58em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+div p {
+    font-family: benchninelight;
+    font-size: 3em;
+    color:grey;
+}
+.active {
+    background-color:darkred;
+    display:inline;
+}
+.activities {
+    font-family: benchninelight;
+    font-size: 3em;
+    color:grey;
+}
+.login {
+    font-family: benchninebold;
+    font-size: 2em;
+    color: darkred;
+}
+footer {
+    font-family: benchninelight;
+    font-size: 1.5em;
+    text-align: center;
+    color:royalblue;
+    padding-top: 3em;
+}
+figure {
+    float: right;
+    display: flex;
+    flex-flow: column;
+    max-width: 50em;
+    text-align: right;
+    margin: auto;
+}
+img {
+    padding-top: 2em;
+    max-height: 80em;
+    max-width: 34em;
+}
+figcaption {
+    text-align: center;
+    padding-right: 15em;
+}
+table {
+    border-style: ridge;
+    border-color: whitesmoke;
+    background-color: lightskyblue;
+    letter-spacing: 1px;
+    font-size: 3em;
+    margin-top: 2em;
+}
+th {
+    font-family: poiret_oneregular;
+    border-style: ridge;
+    border-color: whitesmoke;
+}
+td {
+    font-family: benchninelight;
+    border-style: ridge;
+    border-color: whitesmoke;
+    text-align: center;
+}
+#Apply {
+    display: grid;
+    grid-template-columns: 9em 32rem;
+    grid-row-gap: 0.5em;
+    grid-column-gap: 0.5em;
+    margin-top: 2em;
+    margin-left: 0em;
+    font-family: benchninebold;
+    font-size: 2em;
+    color: darkred;
+    max-width: 36em;
+}
+
+#comments {
+    height: 25em;
+    vertical-align: 12em;
+    align-items: center;
+}
+section div { 
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    background-color: red;
+    border-style: ridge;
+    border-color: whitesmoke;
+    margin-left: 1em;
+    width: 82vw;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    max-width: 46em;
+    font-size: 1em;
+}
+input:invalid {
+    box-shadow: pink;
+    background-image: linear-gradient(to right, pink, rgb(255, 151, 151));
+}
+input:valid {
+    box-shadow: lightgreen;
+    background-image: linear-gradient(to right, lightgreen, green);
+}
+#ThanksDialog {
+    border-style: ridge;
+    max-width: 90em;
+    margin-top: 1em;
+}
+section h1 {
+    font-family: poiret_oneregular;
+    text-align: center;
+    font-size: 1em;
+    color: royalblue;
+}
+section p {
+    font-family: benchninelight;
+    text-align: center;
+    font-size: 1em;
+    color:grey;
+}
+#alignCenter {
+    text-align: center;
+}
+.hidden {
+    margin-left: -95em;
+    height: 0;
+}
+.show {
+    margin-left: 0;
+    height: 7em;
+}
+#frm1 {
+    display: grid;
+    grid-template-columns: 10em 20rem;
+    grid-row-gap: 0.5em;
+    grid-column-gap: 0.5em;
+    margin-top: 3em;
+    margin-left: 0em;
+}

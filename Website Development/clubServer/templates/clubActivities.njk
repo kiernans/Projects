@@ -1,0 +1,29 @@
+{% extends "clubBase.njk" %}
+
+{% block pageTitle %}
+<h1> Club Activities</h1>
+{% endblock %}
+{% block main %}
+    <table id="EventList" class="myEvents">
+        <thead>
+            <tr>
+                <th scope="col", id="name">Name</th>
+                <th scope="col", id="date">Date(s)</th>
+                <th scope="col", id="time">Time(s)</th>
+                <th scope="col", id="description">Description</th>
+            </tr>
+
+            {%for eventData in eventData.myEvents %}
+            <tr>
+                <th scope="row">{{eventData.name}}</th>
+                <td>{{eventData.dates}}</td>
+                <td>{{eventData.times}}</td>
+                <td>{{eventData.description}}</td>
+            </tr>
+            {% endfor %}
+
+            </thead>
+            <tbody>
+            </tbody>
+    </table>
+{% endblock %}

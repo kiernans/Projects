@@ -1,0 +1,29 @@
+{% extends "clubBase.njk" %}
+
+{% block pageTitle %}
+<h1> Activity</h1>
+{% endblock %}
+
+
+{% block main %}
+    <form id="Apply" action=./addActivity method="GET">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" minlength="1"
+                    maxlength="50" required>
+
+        <label for="dates">Dates: </label>
+        <input type="dates" id="dates" name="dates" minlength="1" 
+                    maxlength="50" required>
+
+        <label for="times">Times: </label>
+        <input type="times" id="times" name="times" minlength="1" 
+                    maxlength="50" required>
+
+        <label for="description">Description: </label>
+        <input type="description" id="description" name="description" minlength="1" 
+                    maxlength="50" required>
+
+        <button type="submit" id="button">Add Activity</button>
+    </form>
+{% endblock %}
+

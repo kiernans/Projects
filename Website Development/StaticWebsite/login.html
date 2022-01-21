@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- English -->
+    <head>
+        <title>Raccoon Lovers of California</title>
+        <link rel="stylesheet" href="club.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="application.html">Sign me up!</a></li>
+                <li class="active"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1> Login </h1>
+        </header>
+        <section id='errorPlace'>
+
+        </section>
+        <main>
+            <figure>
+            <img src="images/raccoon5.jpg"
+                 id="loginpic"
+                 alt="Raccoon praises the sun"
+                 title="Stretchy boy raccoon reaches for the stars">
+                 <figcaption> Raccoon reaches for the &#x1f31e;</figcaption>
+            </figure>
+            <form id="frm1">
+                <label class="login" for="email">Email: </label>
+                <input type="email" id="email" required>
+
+                <label class="login" for="password">Password: </label>
+                <input type="password" id="password" required>
+
+                <input type="submit" value="Login" id="button">
+            </form>
+        </main>
+        <footer> © 2020 Kiernan Soriano </footer>
+        <script>
+            let clickTarget = document.getElementById("button");        //obtain button
+            let wMessage = document.getElementById("errorPlace");       //obtain element where error message will go (under login)
+            function myCallback() {
+                event.preventDefault();                                 //allow error message to go through
+                let input = document.getElementById("frm1");            //obtain element where input is
+                let output = input[0].value;                            //get first element of input (which would be email input)
+                let content = `Welcome ${output}. This site is currently under construction.`
+                errMes = document.createElement("div");                 
+                errMes.innerHTML = content;                             //put error message into div
+                wMessage.appendChild(errMes);
+                clickTarget.removeEventListener('click', myCallback);   //stop event after one use
+            };
+            clickTarget.addEventListener('click', myCallback);          //look for button click, call function   
+        </script>
+    </body>   
+</html>

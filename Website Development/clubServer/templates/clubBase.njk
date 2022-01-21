@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block metaStuff %}
+        <title>Raccoon Lovers of California</title>
+        {% endblock %}
+        <link href="club.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./activities">Activities</a></li>
+                <li><a href="./application">Sign me up!</a></li>
+                <li><a href="./login">Login</a></li>
+                {% if user and user.role!=='guest' %}
+                <li><a href="./logout">Logout</a></li>
+                {% if user and user.role==='admin' %}
+                <li><a href="./addActivityForm">Add Activity</a></li>
+                <li><a href="./users">Members</a></li>
+                {% endif %}
+                {% endif %}
+
+            </ul>
+        </nav>
+        <header>
+        {% block pageTitle %} {% endblock %}
+        </header>
+        
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+        
+        <footer>
+            <p>© 2020 Kiernan Soriano</p>
+        </footer>
+    </body>
+
+    <script>
+    {%block scripts %} {% endblock %}
+    </script>
+</html>

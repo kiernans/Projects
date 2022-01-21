@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{title}}</title>
+        <link href="club.css" rel="stylesheet">
+        <script src="eventData.js"></script>
+        <script src="loginPage.js"></script>
+        <script src="createActivities.js"></script>
+    </head>
+    <body>
+    <nav>
+        {% include "mainMenu.html" %}
+    </nav>
+    <main>
+        {{mainContent | safe}}
+    </main>
+    </body>
+</html>

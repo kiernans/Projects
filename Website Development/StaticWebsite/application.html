@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- English -->
+    <head>
+        <title>Raccoon Lovers of California</title>
+        <link rel="stylesheet" href="club.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li class="active"><a href="application.html">Sign me up!</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1> Create an Account </h1>
+        </header>
+        <main>
+            <form id="Apply">
+                <label for="name">Name: </label>
+                <input type="text" id="name" minlength="1"
+                            maxlength="20" required>
+
+                <label for="email">Email: </label>
+                <input type="email" id="email" minlength="1" 
+                            maxlength="20" required>
+                
+                <label for="password">Password: </label>
+                <input type="password" id="password" minlength="1" 
+                            maxlength="20" required>
+                
+                <label for="choice">Favorite Raccoon Trait:</label>
+
+                <select name="choice" id="choice">
+                    <option value="Chubby">Chubby</option>
+                    <option value="Fluffy">Fluffy</option>
+                    <option value="Conniving">Conniving</option>
+                    <option value="Friendly">Friendly</option>
+                </select>
+
+                <label for="comments">How did you hear about us? </label>
+                <textarea cols="30" rows="6"></textarea>
+
+                <button type="submit" id="button">Create Account</button>
+            </form>
+            <section id="ThanksDialog" class="hidden"> 
+            </section>
+        </main>
+        <footer> © 2020 Kiernan Soriano </footer>
+        <script>
+            let clickTarget = document.getElementById("button");
+            let thSection = document.getElementById("ThanksDialog");
+            function thanks() {
+                event.preventDefault();
+                let myH1 = document.createElement("h1");
+                myH1.innerHTML = "WELCOME FELLOW RACCOON LOVER";
+                let myP = document.createElement("p");
+                myP.innerHTML = `Name: ${document.getElementById("name").value}, 
+                                Email: ${document.getElementById("email").value}, 
+                                Favorite Trait: ${document.getElementById("choice").value}`;
+                let align = document.createElement("p");
+                align.setAttribute("id", "alignCenter");
+                align.innerHTML ="<button id='hide'> Close </button>";
+                thSection.appendChild(myH1);
+                thSection.appendChild(myP);
+                thSection.appendChild(align);
+                thSection.classList.toggle("show");
+                let closeTarget = document.getElementById("hide");
+                closeTarget.addEventListener('click', function() {
+                    thSection.classList.toggle("show");
+                });
+                clickTarget.removeEventListener('click', thanks);
+            }
+            clickTarget.addEventListener('click', thanks);
+        </script>
+    </body>   
+</html>

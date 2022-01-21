@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- English -->
+    <head>
+        <title>Raccoon Lovers of California</title>
+        <link rel="stylesheet" href="club.css">
+        <script src="eventData.js"></script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="activities.html">Activities</a></li>
+                <li><a href="application.html">Sign me up!</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1> Club Activities</h1>
+        </header>
+        
+        <main>
+            <table id="EventList" class="myEvents">
+                <thead>
+                    <tr>
+                      <th scope="col", id="name">Name</th>
+                      <th scope="col", id="date">Date(s)</th>
+                      <th scope="col", id="time">Time(s)</th>
+                      <th scope="col", id="description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+            </table>
+        </main>
+        <footer> © 2020 Kiernan Soriano </footer>
+        <script>
+            let eventSection = document.getElementById("EventList");
+            function createRow(eventObj)
+            {
+                let newRow = `<th scope="row">${eventObj.name}</th><td>${eventObj.dates}</td><td>${eventObj.times}</td><td>${eventObj.description}</td>`; //Take portions of event object and set up as table data
+                return newRow;
+            };
+
+            myEvents.forEach(function(myEvents)         //For each element of object
+            {
+                rowInfo = createRow(myEvents);          //Get item from object, put in table data format
+                newRow = document.createElement("tr");  //Create table row
+                eventSection.appendChild(newRow);       //Append table row to existing table
+                newRow.outerHTML = rowInfo;             //Put object info into newly created row
+            });
+        </script>
+    </body>   
+</html>
