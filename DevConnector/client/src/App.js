@@ -5,15 +5,17 @@ import { BrowserRouter as Router,
         } from 'react-router-dom';
 import Navbar from './components/layout/Navbar'
 import Landing from './components/layout/Landing'
+import Alert from './components/layout/Alert'
 import Register from './components/auth/Register'
+import Login from './components/auth/Login'
 import Dashboard from './components/dashboard/Dashboard'
 import CreateProfile from './components/profile-forms/CreateProfile'
 import EditProfile from './components/profile-forms/EditProfile';
 import AddExperience from './components/profile-forms/AddExperience';
 import AddEducation from './components/profile-forms/AddEducation';
+import Profiles from './components/profiles/Profiles';
 import PrivateRoute from './components/routing/PrivateRoute'
-import Login from './components/auth/Login'
-import Alert from './components/layout/Alert'
+
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
@@ -40,6 +42,7 @@ const App = () => {
           <Route path="/" element={ <Landing />} />
           <Route path="register" element={ <Register />} />
           <Route path="login" element={ <Login />} />
+          <Route path="profiles" element={ <Profiles />} />
           <Route path="dashboard" element={ <PrivateRoute component={Dashboard} />} />
           <Route path="create-profile" element={ <PrivateRoute component={CreateProfile} />} />
           <Route path="edit-profile" element={ <PrivateRoute component={EditProfile} />} />
