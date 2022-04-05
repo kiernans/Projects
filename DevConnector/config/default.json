@@ -2,5 +2,5 @@
 	"mongoURI": "mongodb+srv://nukabunny:nukabunny@devconnector.jj7c4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
 	"jwtSecret": "mysecrettoken",
 	"githubClientID": "696b5b95214d095e024b",
-	"githubSecret": "9a7e54de1038afdd0ca5165b76d7c04933b1b1fa"
+	"githubToken": "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"
 }
