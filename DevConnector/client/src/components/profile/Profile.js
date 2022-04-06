@@ -55,9 +55,12 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
 							 ))}
 						 </Fragment>) : (<h4>No experience credentials</h4>)}
 					 </div>
+					  
+					  {/* @todo Fix authentication issues with getGithubRepos
 					 {profile.githubusername && (
 						 <ProfileGithub username={profile.githubusername}/>
-					 )}
+					)}  */}
+					   
 				 </div>
 			</Fragment>}
 	</Fragment>
