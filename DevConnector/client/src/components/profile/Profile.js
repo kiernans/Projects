@@ -18,7 +18,8 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
   
 	return (
 	<Fragment>
-		{profile === null || loading ? <Spinner /> : <Fragment> 
+		<section className="container">
+			{profile === null || loading ? <Spinner /> : <Fragment> 
 				<Link to='/profiles' className='btn btn-light'>
 					Back to profiles
 				</Link>
@@ -63,6 +64,7 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
 					   
 				 </div>
 			</Fragment>}
+		</section>
 	</Fragment>
   )
 }
