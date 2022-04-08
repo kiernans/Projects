@@ -6,6 +6,7 @@ import { addEducation } from '../../actions/profile';
 
 
 const AddEducation = ({ addEducation, history }) => {
+	const navigate = useNavigate();
 	const [formData, setFormData] = useState({
 		school: '',
 		degree: '',
@@ -33,7 +34,7 @@ const AddEducation = ({ addEducation, history }) => {
 			<small>* = required field</small>
 			<form class="form" onSubmit={e => {
 				e.preventDefault();
-				addEducation(formData, history);
+				addEducation(formData, navigate);
 			}}>
 				<div class="form-group">
 				<input type="text" placeholder="* School or Bootcamp" name="school" value={school} 
