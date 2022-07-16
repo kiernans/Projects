@@ -98,6 +98,7 @@ router.delete('/:id', auth, async (req,res) => {
 
 		await post.remove();
 		res.json({ msg: 'Post removed' });
+		return res.json(post.likes);
 
 	} catch (err) {
 		console.error(err.message);
